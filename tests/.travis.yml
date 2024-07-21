@@ -1,0 +1,11 @@
+language: node_js
+
+node_js: 
+- "20.15.0"
+
+install:
+-npm install newman
+
+script:
+-node_modules/.bin/newman run tests/Visa.postman_collection.json -e ProdVisa.postman_environment.json
+
